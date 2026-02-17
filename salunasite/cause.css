@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        -45deg,
+        #ff9a9e,
+        #fad0c4,
+        #fbc2eb,
+        #a6c1ee
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 16s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    padding: 2rem;
+    color: #5a3d4a;
+}
+
+/* 💕 Custom cursor */
+.custom-cursor {
+    width: 22px;
+    height: 22px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s;
+}
+
+.custom-cursor svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 8px rgba(255, 105, 180, 0.6));
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* 💗 Title */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #ff4e8a;
+    text-shadow: 0 0 20px rgba(255, 78, 138, 0.4);
+    margin-bottom: 2rem;
+    animation: fadeInDown 1.2s ease forwards;
+}
+
+/* 💎 Glass Cards */
+.reason-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1.5rem;
+    box-shadow: 0 10px 35px rgba(255, 105, 180, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.reason-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(255, 105, 180, 0.4);
+}
+
+.reason-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+    color: #5a3d4a;
+}
+
+/* 💕 Overlay */
+.gif-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 182, 193, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 1;
+}
+
+.reason-card:hover .gif-overlay {
+    opacity: 1;
+}
+
+/* 💖 Button */
+.shuffle-button {
+    background: linear-gradient(45deg, #ff6f91, #ff9671);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2.4rem;
+    font-size: 1.05rem;
+    color: white;
+    margin: 2.5rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+}
+
+.shuffle-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 35px rgba(255, 105, 180, 0.7);
+}
+
+.shuffle-button.story-mode {
+    background: linear-gradient(45deg, #cdb4db, #ffc8dd);
+    color: #5a3d4a;
+}
+
+/* 💐 Ending section */
+.ending-section {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.ending-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.9rem;
+    color: #ff4e8a;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* 🧸 Teddy */
+.teddy-hug {
+    width: 200px;
+    margin: 0 auto;
+    transform: scale(0);
+}
+
+/* 🎀 Balloons */
+.balloon {
+    position: fixed;
+    bottom: -120px;
+    width: 45px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.85;
+    animation: floatUp linear infinite;
+    z-index: 0;
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    width: 2px;
+    height: 18px;
+    background: rgba(255,255,255,0.7);
+}
+
+/* Pastel colors */
+.balloon.pink { background: #ff6f91; }
+.balloon.rose { background: #ff8fab; }
+.balloon.lavender { background: #cdb4db; }
+.balloon.peach { background: #ff9671; }
+.balloon.sky { background: #a2d2ff; }
+
+/* Counter */
+.reason-counter {
+    font-size: 0.85rem;
+    color: #7a5c6d;
+    margin-top: 1rem;
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-120vh); }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    .reason-text { font-size: 1rem; }
+}

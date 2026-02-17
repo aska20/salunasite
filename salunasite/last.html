@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>For My Forever Best Friend ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+
+    /* 💖 Pink Gradient */
+    background: linear-gradient(135deg, #ff9a9e, #fbc2eb, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientFlow 15s ease infinite;
+
+    color: #5a3d4a;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 💕 Heart Cursor */
+.cursor {
+    width: 18px;
+    height: 18px;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 999;
+    background: #ff4e8a;
+}
+
+.cursor::before,
+.cursor::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: #ff4e8a;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cursor::before { top: -9px; left: 0; }
+.cursor::after { top: 0; left: 9px; }
+
+section { padding: 4rem 1.5rem; }
+
+h1 {
+    font-size: 2.6rem;
+    color: #ff2e7a;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 18px rgba(255, 46, 122, 0.4);
+}
+
+.greeting {
+    font-size: 1.2rem;
+    max-width: 760px;
+    margin: 1.5rem auto;
+    line-height: 1.9;
+    color: #6b4b5a;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.photo-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    min-height: 480px;   /* makes all cards equal height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Image Styling */
+.photo-card img {
+    width: 100%;
+    height: 260px;        /* fixed height for all images */
+    object-fit: cover;    /* keeps image proportional */
+}
+
+/* Text Area */
+.photo-text {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #5e4b56;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;         /* makes text area fill space evenly */
+}
+
+.final-message {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(255, 105, 135, 0.25);
+}
+
+.final-message h2 {
+    color: #ff2e7a;
+    margin-bottom: 1.2rem;
+}
+
+.final-message p {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.95;
+    color: #5a3d4a;
+}
+
+.balloon {
+    position: fixed;
+    bottom: -120px;
+    font-size: 2rem;
+    pointer-events: none;
+    opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<section>
+    <h1>For My Forever Childhood Bestie ❤️</h1>
+    <div class="greeting"></div>
+</section>
+
+<section class="gallery">
+
+   <div class="photo-card">
+    <img src="family.jpg" alt="Family Memory">
+    <div class="photo-text">
+        No matter how far you are now, your family must miss you deeply. 
+        You have always been such a loving and understanding daughter 
+        someone who carries her family’s values with pride. 
+        Even in the UK, I know your heart still stays connected to home.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="brother.jpg" alt="Sibling Bond">
+    <div class="photo-text">
+        The bond you share with your brother is something truly special. 
+        The teasing, the laughter, the silent understanding 
+        it’s a connection that only siblings can have.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="holi.jpg" alt="Our Friendship">
+    <div class="photo-text">
+        From class 7–8 until now, it has been such a long journey of friendship. 
+        We have grown, changed, and stepped into different phases of life, 
+        but our bond has only become stronger with time.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="motivate.jpg" alt="After Accident">
+    <div class="photo-text">
+        This was the first photo I took after my accident. 
+        I felt broken, insecure, and unsure if I could ever be myself again. 
+        But you were the one who kept motivating me pushing me gently 
+        out of that insecure zone and helping me rebuild my confidence.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="newari.jpg" alt="Newari Culture">
+    <div class="photo-text">
+        Seeing you dressed in Newari culture makes me feel proud. 
+        The tradition, the grace, the heritage  you carry it so beautifully, 
+        like you were born to represent it.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="cake.jpg" alt="Cake Moments">
+    <div class="photo-text">
+        We never needed a celebration to buy cake. 
+        Sometimes we just went out randomly, bought one, 
+        and enjoyed it like it was the biggest occasion in the world.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="bhakti.jpg" alt="Tika Photo">
+    <div class="photo-text">
+        With tika on your forehead, you look so graceful and pure — 
+        like a truly dharmik and respectful woman. 
+        There’s something so peaceful and beautiful about that look.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="time.jpg" alt="Fun Time">
+    <div class="photo-text">
+        The two of you laughing your hearts out 
+        those carefree moments where life felt light and simple. 
+        No worries, no stress  just pure happiness.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="style.jpg" alt="Stylish Photo">
+    <div class="photo-text">
+        This stylish photo of you standing in that nest-like place 
+        you truly look like a little bird, confident and free. 
+        It’s one of those pictures where you shine effortlessly.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="maleup.jpg" alt="Makeup Try">
+    <div class="photo-text">
+        When I tried makeup on you, I realized how naturally beautiful you are. 
+        Your facial features are so sharp and perfect 
+        you looked absolutely stunning without even trying too hard.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="basanta.jpg" alt="Basantapur Memory">
+    <div class="photo-text">
+        Our Basantapur day  laughing, roaming around, 
+        eating foksu, and enjoying every second. 
+        That day felt simple but unforgettable.
+    </div>
+</div>
+
+<div class="photo-card">
+    <img src="last.jpg" alt="Last Meetup">
+    <div class="photo-text">
+        This was our last meetup before you left for the UK. 
+        I miss our bond deeply no one can ever replace 
+        the place you hold in my heart. 
+        I will always wait for the day we meet again soon.
+    </div>
+</div>
+
+
+</section>
+
+<section>
+    <div class="final-message">
+        <h2>What Our Friendship Means</h2>
+
+        <p>
+            We didn’t need big plans, expensive gifts, or perfect days.
+            We just needed each other  and somehow, that was enough.
+        </p>
+
+        <p>
+            From sharing snacks, saving pennies, laughing at silly jokes,
+            and dreaming about the future  we grew up side by side.
+        </p>
+
+        <p>
+            No pretending. No filters. Just pure, chaotic, beautiful friendship.
+            And I wouldn’t trade these memories for anything.
+        </p>
+
+        <p>
+            Thank you for being my constant through every phase of life.
+            Childhood friend, partner in crime, and forever safe place. ❤️
+        </p>
+    </div>
+</section>
+
+<script>
+// Cursor
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+// Typing effect
+const greetingText =
+"From saving coins for panipuri to sharing our wildest dreams, you have been my constant since childhood. No matter how much we grow, those memories stay golden forever.";
+const greetingElement = document.querySelector('.greeting');
+let i = 0;
+
+function typeGreeting() {
+    if (i < greetingText.length) {
+        greetingElement.textContent += greetingText.charAt(i);
+        i++;
+        setTimeout(typeGreeting, 60);
+    }
+}
+
+// Balloons
+function createBalloon() {
+    const b = document.createElement('div');
+    b.className = 'balloon';
+    b.textContent = '💖';
+    b.style.left = Math.random() * 100 + 'vw';
+    document.body.appendChild(b);
+
+    gsap.to(b, {
+        y: -window.innerHeight - 200,
+        duration: Math.random() * 5 + 6,
+        ease: "none",
+        onComplete: () => b.remove()
+    });
+}
+
+window.onload = () => {
+    typeGreeting();
+    setInterval(createBalloon, 1000);
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+/* 🌸 Body Layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Soft feminine animated gradient */
+    background: linear-gradient(
+        -45deg,
+        #ff9a9e,
+        #fad0c4,
+        #fbc2eb,
+        #a6c1ee
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+
+    overflow-x: hidden;   /* allow vertical growth */
+    overflow-y: auto;
+
+    position: relative;
+    color: #4a4a4a;
+}
+
+/* ✨ Custom Cursor */
+.cursor {
+    width: 18px;
+    height: 18px;
+    background: #ff6f91;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    box-shadow: 0 0 12px rgba(255, 111, 145, 0.7);
+    transition: transform 0.15s ease;
+    z-index: 999;
+}
+
+/* 🌷 Main Container */
+.container {
+    text-align: center;
+    z-index: 2;
+    max-width: 900px;
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🌟 Heading */
+h1 {
+    font-size: 3rem;
+    color: #ff4e8a;
+    text-shadow: 0 0 18px rgba(255, 78, 138, 0.4);
+    margin-bottom: 2rem;
+    opacity: 0;
+    letter-spacing: 1px;
+}
+
+/* 💌 Greeting Text */
+.greeting {
+    max-width: 800px;
+    margin: 0 auto 50px auto;  /* space below text */
+    text-align: center;
+    line-height: 1.9;
+    font-size: 20px;
+    white-space: pre-line;     /* enables \n line breaks */
+    color: #5e4b56;
+}
+
+/* 💕 Call To Action Button */
+.cta-button {
+    padding: 1rem 2.8rem;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #ff6f91, #ff9671);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 111, 145, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    font-weight: 600;
+
+    margin-top: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+.cta-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255, 111, 145, 0.9);
+}
+
+/* 🌸 Floating Decorative Emojis */
+.floating {
+    position: fixed;
+    pointer-events: none;
+    opacity: 0.85;
+    z-index: 1;
+}
+
+/* 🎈 Balloons */
+.balloon {
+    position: absolute;
+    bottom: -120px;
+    width: 50px;
+    height: 65px;
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+    opacity: 0.85;
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: rgba(255,255,255,0.7);
+}
+
+/* Balloon Colors */
+.balloon.pink { background: #ff6f91; }
+.balloon.peach { background: #ff9671; }
+.balloon.lavender { background: #cdb4db; }
+.balloon.sky { background: #a2d2ff; }
+.balloon.rose { background: #ff8fab; }
+
+/* 🎨 Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        transform: translateY(-120vh) translateX(20px);
+    }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    h1 { 
+        font-size: 2.2rem; 
+    }
+
+    .greeting { 
+        font-size: 1.15rem; 
+        line-height: 1.7;
+    }
+
+    .cta-button { 
+        font-size: 1rem; 
+        padding: 0.9rem 2.2rem;
+    }
+}
